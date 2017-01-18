@@ -1,0 +1,31 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.owfar.android.ui.profile.ProfileActivity">
+
+    <item
+        android:id="@+id/action_profile_camera"
+        android:icon="@drawable/ic_menu_add_photo"
+        android:orderInCategory="100"
+        android:title="Add Photo"
+        app:showAsAction="always">
+
+        <menu>
+            <item
+                android:id="@+id/action_profile_takePhoto"
+                android:icon="@drawable/ic_menu_camera"
+                android:title="Take Photo" />
+
+            <item
+                android:id="@+id/action_profile_pickPhoto"
+                android:icon="@drawable/ic_menu_gallery"
+                android:title="Choose from Gallery" />
+
+            <item
+                android:id="@+id/action_profile_pickImageContent"
+                android:icon="@drawable/ic_menu_recent"
+                android:title="Get Recent" />
+        </menu>
+
+    </item>
+</menu>

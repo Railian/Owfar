@@ -1,0 +1,82 @@
+buildscript {
+    repositories {
+        jcenter()
+    }
+    dependencies {
+        classpath "io.realm:realm-gradle-plugin:2.2.0"
+    }
+}
+
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'realm-android'
+
+android {
+    compileSdkVersion 25
+    buildToolsVersion "25.0.0"
+    signingConfigs {
+        config {
+            keyAlias 'owfar'
+            keyPassword 'nikond700'
+            storeFile file('../GrandizKeystore.jks')
+            storePassword '123456'
+        }
+    }
+    defaultConfig {
+        applicationId "com.owfar.android"
+        minSdkVersion 15
+        targetSdkVersion 25
+        versionCode 1
+        versionName "1.0"
+        multiDexEnabled true
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        signingConfig signingConfigs.config
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    sourceSets {
+        main.java.srcDirs += 'src/main/kotlin'
+    }
+
+    dexOptions {
+        javaMaxHeapSize "4g"
+    }
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    compile project(':indeterminate-checkbox')
+    compile 'com.android.support:multidex:1.0.1'
+    compile 'com.android.support:appcompat-v7:25.0.0'
+    compile 'com.android.support:recyclerview-v7:25.0.0'
+    compile 'com.android.support:design:25.0.0'
+    compile 'com.google.android.gms:play-services-gcm:9.8.0'
+    testCompile 'junit:junit:4.12'
+    compile 'com.google.code.gson:gson:2.8.0'
+    compile 'com.squareup.retrofit2:retrofit:2.1.0'
+    compile 'com.facebook.android:facebook-android-sdk:4.17.0'
+    compile 'com.squareup.retrofit2:converter-gson:2.1.0'
+    compile 'com.squareup.picasso:picasso:2.5.2'
+    compile 'com.github.bumptech.glide:glide:3.7.0'
+    compile 'com.balysv.materialmenu:material-menu:1.5.4'
+    compile 'com.miguelcatalan:materialsearchview:1.4.0'
+    compile 'com.timehop.stickyheadersrecyclerview:library:0.4.3'
+    compile 'com.github.siyamed:android-shape-imageview:0.9.3'
+    compile 'com.github.chrisbanes.photoview:library:1.2.4'
+    compile 'com.google.guava:guava:20.0'
+    compile 'io.socket:socket.io-client:0.8.2'
+    compile "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
+    compile "org.jetbrains.kotlin:kotlin-reflect:$kotlin_version"
+    compile 'org.jetbrains.anko:anko-sdk15:0.9'
+    compile 'org.jetbrains.anko:anko-support-v4:0.9'
+    compile 'org.jetbrains.anko:anko-appcompat-v7:0.9'
+    compile 'com.anjlab.android.iab.v3:library:1.0.36'
+}
+
+repositories {
+    mavenCentral()
+}

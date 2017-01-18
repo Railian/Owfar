@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/fragment_messenger_vRoot"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.main.MainActivity">
+
+    <ImageView
+        android:id="@+id/fragment_messenger_ivBackground"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/temp_avatar" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:alpha="0.2"
+        android:background="@color/colorPrimary" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <android.support.v4.widget.SwipeRefreshLayout
+            android:id="@+id/fragment_messenger_vSwipeRefresh"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+            <com.owfar.android.ui.messenger.ContextMenuRecyclerView
+                android:id="@+id/fragment_messenger_rvMessenger"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                tools:listitem="@layout/item_messenger_left_comment" />
+
+        </android.support.v4.widget.SwipeRefreshLayout>
+
+        <include
+            layout="@layout/merge_messenger"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <com.owfar.android.ui.boards.asserts.AssertsBoard
+            android:id="@+id/fragment_messenger_vAssertsBoard"
+            android:layout_width="match_parent"
+            android:layout_height="230dp"
+            android:elevation="8dp"
+            android:visibility="gone" />
+
+        <com.owfar.android.ui.boards.stickers.StickersBoard
+            android:id="@+id/fragment_messenger_vStickersBoard"
+            android:layout_width="match_parent"
+            android:layout_height="230dp"
+            android:elevation="8dp"
+            android:visibility="gone" />
+
+    </LinearLayout>
+
+</FrameLayout>

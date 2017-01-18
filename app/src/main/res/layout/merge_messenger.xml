@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/merge_messenger_vMessenger"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/white"
+    android:elevation="8dp"
+    android:gravity="center"
+    android:orientation="horizontal"
+    android:paddingBottom="4dp"
+    android:paddingLeft="8dp"
+    android:paddingRight="8dp" android:animateLayoutChanges="true"
+    android:paddingTop="4dp"
+    tools:context=".ui.main.MainActivity">
+
+    <ImageView
+        android:id="@+id/merge_messenger_ivAddAsserts"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:src="@drawable/ic_messenger_add_asserts" />
+
+    <Space
+        android:layout_width="8dp"
+        android:layout_height="match_parent" />
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:background="@drawable/bg_registration_et"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:padding="0dp">
+
+        <EditText
+            android:id="@+id/merge_messenger_etMessage"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@null"
+            android:gravity="center_vertical"
+            android:paddingBottom="12dp"
+            android:paddingLeft="16dp"
+            android:paddingTop="12dp" />
+
+        <ImageView
+            android:id="@+id/merge_messenger_ivAddSticker"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:padding="6dp"
+            android:src="@drawable/ic_messenger_add_stickers" />
+
+    </LinearLayout>
+
+    <Space
+        android:layout_width="8dp"
+        android:layout_height="match_parent" />
+
+    <ImageView
+        android:id="@+id/merge_messenger_ivSend"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:src="@drawable/ic_messenger_send" />
+
+</LinearLayout>

@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:weightSum="6"
+    tools:context=".ui.registration.RegistrationActivity">
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.5" />
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="32dp" />
+
+    <LinearLayout
+        android:id="@+id/fragment_registration_phone_number_vCountryCode"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginRight="32dp"
+        android:background="@drawable/bg_registration_et"
+        android:elevation="2dp"
+        android:gravity="center"
+        android:padding="1dp"
+        android:transitionName="frame">
+
+        <TextView
+            android:id="@+id/fragment_registration_phone_number_tvDialCode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:paddingLeft="23dp"
+            android:paddingRight="8dp"
+            android:singleLine="true"
+            android:textColor="@color/country_code_dial_code"
+            android:transitionName="dial_code"
+            tools:text="(+380)" />
+
+        <TextView
+            android:id="@+id/fragment_registration_phone_number_tvCountryName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:transitionName="name"
+            tools:text="Ukraine" />
+
+        <FrameLayout
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:padding="1dp">
+
+            <!--<com.github.siyamed.shapeimageview.mask.PorterCircularImageView-->
+                <!--android:id="@+id/fragment_registration_phone_number_pcivCountryFlag"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="match_parent"-->
+                <!--android:alpha="0.5" />-->
+
+            <TextView
+                android:id="@+id/fragment_registration_phone_number_tvCodeLabel"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center" android:background="@drawable/bg_country_code_label"
+                android:textColor="@color/country_code_label"
+                android:textStyle="bold"
+                android:transitionName="code"
+                tools:text="UA" />
+
+        </FrameLayout>
+
+    </LinearLayout>
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="16dp" />
+
+    <EditText
+        android:id="@+id/fragment_registration_phone_number_etPhoneNumber"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginRight="32dp"
+        android:background="@drawable/bg_registration_et"
+        android:ellipsize="end"
+        android:hint="Number without the country code"
+        android:inputType="phone"
+        android:singleLine="true" />
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="24dp" />
+
+    <Button
+        android:id="@+id/fragment_registration_phone_number_btContinue"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginRight="32dp"
+        android:background="@drawable/bg_registration_bt"
+        android:text="Continue"
+        android:textColor="@android:color/white" />
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="12dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="32dp"
+        android:layout_marginRight="32dp"
+        android:gravity="center"
+        android:text="An access code will be sent to you by SMS."
+        android:textSize="14sp" />
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="32dp" />
+</LinearLayout>

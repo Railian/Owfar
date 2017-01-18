@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/boardColor"
+    android:orientation="horizontal">
+
+    <com.owfar.android.ui.boards.stickers.ViewPagerNotScrollable
+        android:id="@+id/board_stickers_vpnsStickersBoardPager"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:background="@color/colorPrimaryDark"
+        android:orientation="vertical">
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.25" />
+
+        <ImageView
+            android:id="@+id/board_stickers_ivRecent"
+            android:layout_width="48dp"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:padding="8dp"
+            android:src="@drawable/ic_stickers_board_page_recent"
+            android:tag="0" />
+
+        <ImageView
+            android:id="@+id/board_stickers_ivMyStickers"
+            android:layout_width="48dp"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:alpha="0.5"
+            android:padding="8dp"
+            android:src="@drawable/ic_stickers_board_page_my_stickers"
+            android:tag="1" />
+
+        <ImageView
+            android:id="@+id/board_stickers_ivMyAnimations"
+            android:layout_width="48dp"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:alpha="0.5"
+            android:padding="8dp"
+            android:src="@drawable/ic_stickers_board_page_my_animations"
+            android:tag="2" />
+
+        <ImageView
+            android:id="@+id/board_stickers_ivPremium"
+            android:layout_width="48dp"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:alpha="0.5"
+            android:padding="8dp"
+            android:src="@drawable/ic_stickers_board_page_premium"
+            android:tag="3" />
+
+        <ImageView
+            android:id="@+id/board_stickers_iv5thTab"
+            android:layout_width="48dp"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:alpha="0.5"
+            android:padding="8dp"
+            android:src="@drawable/ic_stickers_board_page_5th_tab"
+            android:tag="4" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.25" />
+    </LinearLayout>
+</LinearLayout>

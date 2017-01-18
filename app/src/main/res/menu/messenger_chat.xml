@@ -1,0 +1,17 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".ui.main.MainActivity">
+
+    <item
+        android:id="@+id/action_add_members"
+        android:title="Add Members" />
+
+    <item
+        android:id="@+id/action_leave_chat"
+        android:title="Leave Chat" />
+
+    <item
+        android:id="@+id/action_options"
+        android:title="Options"/>
+
+</menu>

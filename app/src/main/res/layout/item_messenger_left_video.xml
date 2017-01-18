@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="left"
+    android:orientation="horizontal"
+    android:padding="8dp"
+    tools:background="@color/colorPrimaryDark">
+
+    <com.github.siyamed.shapeimageview.CircularImageView
+        android:id="@+id/item_messenger_civPhoto"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:layout_marginRight="4dp"
+        android:src="@drawable/temp_avatar" />
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:background="@drawable/bg_messenger_item_left"
+        android:orientation="vertical"
+        android:paddingBottom="8dp"
+        android:paddingLeft="0dp"
+        android:paddingRight="0dp"
+        android:paddingTop="12dp">
+
+        <TextView
+            android:id="@+id/item_messenger_tvDisplayName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:textSize="13sp"
+            android:textStyle="bold"
+            tools:text="Display Name" />
+
+        <TextView
+            android:id="@+id/item_messenger_tvHeader"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:gravity="center"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:visibility="gone"
+            tools:text="Video Header"
+            tools:visibility="visible" />
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/item_messenger_ivVideo"
+                android:layout_width="match_parent"
+                android:layout_height="160dp"
+                android:layout_marginBottom="8dp"
+                android:layout_marginTop="8dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/bg_messenger_video_placeholder" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/item_messenger_ivDownloadVideo"
+                    android:layout_width="64dp"
+                    android:layout_height="64dp"
+                    android:padding="4dp"
+                    android:src="@drawable/ic_download_video" />
+
+                <ImageView
+                    android:id="@+id/item_messenger_ivPlayVideo"
+                    android:layout_width="64dp"
+                    android:layout_height="64dp"
+                    android:padding="4dp"
+                    android:src="@drawable/ic_play_video" />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/item_messenger_tvContent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:textSize="13sp"
+            android:visibility="gone"
+            tools:text="Video content"
+            tools:visibility="visible" />
+
+        <TextView
+            android:id="@+id/item_messenger_tvTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:text="19:23"
+            android:textSize="12sp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+</LinearLayout>

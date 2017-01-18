@@ -1,0 +1,18 @@
+<resources>
+
+    <!-- Strings related to fragment_registration_sign_up -->
+    <string name="fragment_registration_sign_up_tvEnterCode">Enter code below</string>
+    <string name="fragment_registration_sign_up_etVerificationCode">Verification code</string>
+    <string name="fragment_registration_sign_up_btContinue">Continue</string>
+    <string name="fragment_registration_sign_up_tvResendCode">If you did not receive the code,\n press resend code</string>
+    <string name="fragment_registration_sign_up_tvResendCode_kAction">resend code</string>
+    <string name="fragment_registration_sign_up_tvChangePhoneNumber">or change your phone number</string>
+    <string name="fragment_registration_sign_up_tvChangePhoneNumber_kAction">change your phone number</string>
+
+    <!-- Strings related to fragment_registration_number_verification -->
+    <string name="fragment_registration_number_verification_tvSendCode">Is this your current number?\n{phoneNumber}. An SMS with your accesscode will be sent to this number.</string>
+    <string name="fragment_registration_number_verification_tvSendCode_kPhoneNumber">{phoneNumber}</string>
+    <string name="fragment_registration_number_verification_btSendCode">Send code</string>
+    <string name="fragment_registration_number_verification_tvEditPhoneNumber">Edit your phone number</string>
+
+</resources>
