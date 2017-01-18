@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">Indeterminate CheckBox and RadioButton Library</string>
+    <string name="gcm_defaultSenderId" translatable="false">712584472244</string>
+</resources>
